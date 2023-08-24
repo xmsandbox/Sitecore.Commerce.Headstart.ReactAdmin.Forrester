@@ -1,7 +1,7 @@
-import {HStack, useColorModeValue, Container, Show} from "@chakra-ui/react"
+import {HStack, useColorModeValue, Container, Image, Show} from "@chakra-ui/react"
 import AcountNavigation from "components/navigation/AcountNavigation"
 import {NavMenuDrawer} from "../navigation/NavMenuDrawer"
-import {HeaderLogo} from "../branding/HeaderLogo"
+import { Link } from "../navigation/Link"
 
 const Header = () => {
   return (
@@ -20,7 +20,9 @@ const Header = () => {
         <Show below="sm">
           <NavMenuDrawer />
         </Show>
-        <HeaderLogo width={["150px", "auto"]} />
+        <Link href="/" display="flex" alignItems="center" height="100%">
+          <Image src="/vector/shop.svg" alt="PLAY! Marketplace logo" maxW={240} w="full" />
+        </Link>
         <AcountNavigation />
       </HStack>
     </Container>
