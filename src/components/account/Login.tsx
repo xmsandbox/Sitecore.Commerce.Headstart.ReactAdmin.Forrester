@@ -10,6 +10,7 @@ import {
   Heading,
   Hide,
   HStack,
+  Image,
   Input,
   useColorModeValue,
   VStack
@@ -19,6 +20,7 @@ import {ChangeEvent, FormEvent, FunctionComponent, useCallback, useState} from "
 import {useAuth} from "hooks/useAuth"
 import schraTheme from "theme/theme"
 import {HeaderLogo} from "../branding/HeaderLogo"
+import { Link } from "../navigation/Link"
 
 interface OcLoginFormProps {
   title?: string
@@ -78,7 +80,9 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({title = "Sign into yo
         >
           <chakra.form pl={[0, 12]} name="ocLoginForm" onSubmit={handleSubmit}>
             <VStack width="full" alignItems={"flex-start"} gap={4}>
-              <HeaderLogo maxW={400} w="full" />
+              <Link href="/" display="flex" alignItems="center" height="100%">
+                <Image src="/vector/shop.svg" alt="PLAY! Marketplace logo" maxW={400} w="full" />
+              </Link>
               <Heading as="h1" fontSize={"4xl"} fontWeight={"thin"} color={loginHeaderColor}>
                 {title}
               </Heading>
