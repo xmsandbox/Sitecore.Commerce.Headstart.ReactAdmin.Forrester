@@ -1,7 +1,6 @@
 import {HStack, useColorModeValue, Container, Image, Show} from "@chakra-ui/react"
 import AcountNavigation from "components/navigation/AcountNavigation"
 import {NavMenuDrawer} from "../navigation/NavMenuDrawer"
-import {HeaderLogo} from "../branding/HeaderLogo"
 import { Link } from "../navigation/Link"
 
 const Header = () => {
